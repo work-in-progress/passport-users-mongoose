@@ -1,0 +1,20 @@
+{
+   "name" : "BasicDataTypeTest",
+   "description":"A basic schema",
+   "type":"object",
+   "properties":{
+      "stringValue":{
+         "description":"A string value",
+         "type":"string"
+      },
+      "numberValue":{
+         "type":"number"
+      },
+      "booleanValue":{
+         "type":"boolean"
+      },
+      "integerValue":{
+         "type":"integer"
+      }
+   }
+}
