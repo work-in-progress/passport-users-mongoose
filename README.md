@@ -35,7 +35,8 @@ authentications: array of
      userName;  like martin_sunset
      others: Object containing additional infos
 
-
+--> abuse management
+--> temporary/anonymous users --> Strategy
 
 # Install
 
