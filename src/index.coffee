@@ -18,3 +18,5 @@ exports.UserSchema = UserSchema = require './schemas/user_schema'
 
 exports.Client = require('./client').Client
 
+# TODO Check this one. Read up on docs if this is a good thing to do
+mongooseTypes.loadTypes(mongoose) 

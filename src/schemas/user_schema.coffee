@@ -6,7 +6,8 @@ module.exports = UserSchema = new mongoose.Schema
     type : Array
     index : true
     unique : true
-  
+
+###
   # Visual aspects of the user
   'userName' : 
     type : String
@@ -26,3 +27,4 @@ module.exports = UserSchema = new mongoose.Schema
   
   
 UserSchema.plugin mongooseTypes.useTimestamps
+###

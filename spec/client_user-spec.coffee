@@ -5,8 +5,9 @@ mongoose = require 'mongoose'
 main = require '../lib/index'
 specHelper = require './spec_helper'
 specHelper.connectDatabase()
+client = new main.Client()
 
-vows.describe("client")
+vows.describe("client_user")
   .addBatch
     "CLEANUP TEMP":
       topic: () ->
@@ -29,9 +30,12 @@ vows.describe("client")
       "THEN IT SHOULD BE SET UP :)": () ->
         assert.isTrue true
   .addBatch
-    "WHEN creating a client" :
+    "WHEN creating a new user" :
       topic: () -> 
-        return new main.Client()
-      "THEN it should not be null": (client) ->
-        assert.isNotNull client        
+        client.createUser(null,"frank",null, @callback)
+        return
+      "THEN it should not be an error": (err,user) ->
+        assert.isNull err
+        "THEN it should return a user object": (err,user) ->
+          assert.isNotNull user  
   .export module
